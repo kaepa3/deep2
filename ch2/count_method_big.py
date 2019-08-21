@@ -15,7 +15,7 @@ print('calculating SVD ...')
 W = ppmi(C, verbose=True)
 
 try:
-    from skleran.utils.extmath import randomized_svd
+    from sklearn.utils.extmath import randomized_svd
     U,S,V =randomized_svd(W, n_components=wordvec_size, n_iter=5,random_state=None)
 except ImportError:
     U,S,v = np.linalg.svd(W)
